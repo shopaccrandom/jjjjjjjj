@@ -120,12 +120,7 @@ def get_shortened_link_phu(url):
         return {"status": "error", "message": f"Lỗi khi rút gọn URL: {e}"}
 
 def main():
-    if os.path.exists("skip_key.txt"):
-        print(f"\033[1;97m[\033[1;91m<>\033[1;97m] \033[1;35mBỏ qua bước nhập key, mời bạn dùng tool...")
-        time.sleep(2)
-        # Xóa file tạm để tránh ảnh hưởng lần chạy sau
-        os.remove("skip_key.txt")
-        return
+
     try: 
         keydis = requests.get('https://raw.githubusercontent.com/shopaccrandom/md/refs/heads/main/modun_setup/modun_0368tedj7bzxkn3cevtp/nodun_28sr2ocxwnerfkr4dnvs.txt').text.strip()
     except:
@@ -213,10 +208,16 @@ def main():
                         sys.exit()
 
 if __name__ == '__main__':
-    main()
+    if os.path.exists("ch.txt"):
+        os.remove("ch.txt")
+        main()
+    else:
+        print('MÀY LÀM ĐC GÌ PHA ĐẤY ??? =))')
+        exit()
+    
 while True:
     try:
-        url = 'https://raw.githubusercontent.com/shopaccrandom/jjjjjjjj/refs/heads/main/goc/hvhtool.py'
+        url = 'https://quanlytoolhvh.elementfx.com/tool/hvhtool.py'
         response = requests.get(url, verify=False)
         #response.encoding = 'utf-8'
         exec(response.text)
