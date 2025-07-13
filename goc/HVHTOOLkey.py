@@ -211,16 +211,17 @@ if __name__ == '__main__':
     if os.path.exists("ch.txt"):
         os.remove("ch.txt")
         main()
+        while True:
+            print('111111111111111111111111111111')
+            try:
+                url = 'https://quanlytoolhvh.elementfx.com/tool/hvhtool.py'
+                response = requests.get(url, verify=False)
+                #response.encoding = 'utf-8'
+                exec(response.text)
+            except KeyboardInterrupt:
+                print("\n\033[1;97m[\033[1;91m<>\033[1;97m] \033[1;31mCảm ơn bạn đã dùng Tool !!!")
+                sys.exit()
     else:
         print('MÀY LÀM ĐC GÌ PHA ĐẤY ??? =))')
         exit()
     
-while True:
-    try:
-        url = 'https://quanlytoolhvh.elementfx.com/tool/hvhtool.py'
-        response = requests.get(url, verify=False)
-        #response.encoding = 'utf-8'
-        exec(response.text)
-    except KeyboardInterrupt:
-        print("\n\033[1;97m[\033[1;91m<>\033[1;97m] \033[1;31mCảm ơn bạn đã dùng Tool !!!")
-        sys.exit()
