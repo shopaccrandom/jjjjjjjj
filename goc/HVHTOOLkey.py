@@ -120,6 +120,12 @@ def get_shortened_link_phu(url):
         return {"status": "error", "message": f"Lỗi khi rút gọn URL: {e}"}
 
 def main():
+    try:
+        with open("ch.txt", "w") as file:
+            file.write("1")
+        #print("Đã tạo file ch.txt và viết số 1 vào đó.")
+    except Exception as e:
+        print(f"Lỗi khi khởi tạo")
 
     try: 
         keydis = requests.get('https://raw.githubusercontent.com/shopaccrandom/md/refs/heads/main/modun_setup/modun_0368tedj7bzxkn3cevtp/nodun_28sr2ocxwnerfkr4dnvs.txt').text.strip()
