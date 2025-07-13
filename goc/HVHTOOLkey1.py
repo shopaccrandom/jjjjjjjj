@@ -214,19 +214,21 @@ def main():
                         sys.exit()
 if __name__ == '__main__':
     main()
-    if os.path.exists("ch.txt"):
-        os.remove("ch.txt")
-        while True:
-            print('111111111111111111111111111111')
-            try:
-                url = 'https://raw.githubusercontent.com/shopaccrandom/jjjjjjjj/refs/heads/main/goc/hvhtool.py'
-                response = requests.get(url, verify=False)
-                #response.encoding = 'utf-8'
-                exec(response.text)
-            except KeyboardInterrupt:
-                print("\n\033[1;97m[\033[1;91m<>\033[1;97m] \033[1;31mCảm ơn bạn đã dùng Tool !!!")
-                sys.exit()
-    else:
-        print('MÀY LÀM ĐC GÌ PHA ĐẤY ??? =))')
-        exit()
+
+while True:
+    print('111111111111111111111111111111')
+    try:
+        if os.path.exists("ch.txt"):
+            os.remove("ch.txt")
+            url = 'https://raw.githubusercontent.com/shopaccrandom/jjjjjjjj/refs/heads/main/goc/hvhtool.py'
+            response = requests.get(url, verify=False)
+            #response.encoding = 'utf-8'
+            exec(response.text)
+        else:
+            print('MÀY LÀM ĐC GÌ PHA ĐẤY ??? =))')
+            exit()
             
+    except KeyboardInterrupt:
+        print("\n\033[1;97m[\033[1;91m<>\033[1;97m] \033[1;31mCảm ơn bạn đã dùng Tool !!!")
+        sys.exit()
+
