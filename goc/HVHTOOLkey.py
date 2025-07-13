@@ -206,10 +206,9 @@ def main():
                     except KeyboardInterrupt:
                         print("\n\033[1;97m[\033[1;91m<>\033[1;97m] \033[1;31mCảm ơn bạn đã dùng Tool !!!")
                         sys.exit()
-
-if __name__ == '__main__':
-    if os.path.exists("ch.txt"):
-        os.remove("ch.txt")
+if os.path.exists("ch.txt"):
+    os.remove("ch.txt")
+    if __name__ == '__main__':
         main()
         while True:
             print('111111111111111111111111111111')
@@ -221,7 +220,7 @@ if __name__ == '__main__':
             except KeyboardInterrupt:
                 print("\n\033[1;97m[\033[1;91m<>\033[1;97m] \033[1;31mCảm ơn bạn đã dùng Tool !!!")
                 sys.exit()
-    else:
-        print('MÀY LÀM ĐC GÌ PHA ĐẤY ??? =))')
-        exit()
-    
+else:
+    print('MÀY LÀM ĐC GÌ PHA ĐẤY ??? =))')
+    exit()
+        
